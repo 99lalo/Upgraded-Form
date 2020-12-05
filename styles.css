@@ -20,3 +20,7 @@
 .textfooter{
     font-size: 0.8em;
 }
+.amount{
+    width: 14em;
+    float: left;
+}
