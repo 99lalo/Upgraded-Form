@@ -20,7 +20,11 @@
 .textfooter{
     font-size: 0.8em;
 }
+.dolar{
+    position: absolute;
+    font-weight: bold;
+}
 .amount{
-    width: 14em;
-    float: left;
+    width: 22.1em;
+    margin-left: 0.5em;
 }
