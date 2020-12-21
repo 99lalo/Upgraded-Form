@@ -13,7 +13,6 @@
                     <div class="card-header">
                         <h1>Payment form example</h1>
                     </div>
-                <form id="myForm" class="m-3">
                     <div class="form-row">
                         <div class="col-sm-12" id="error">
                         </div>
@@ -25,7 +24,7 @@
                         </div>
                         <div class="form-group col-md-3">
                         <label for="inputCVC">CVC #</label>
-                        <input type="password" class="form-control" id="inputCVC" placeholder="0000">
+                        <input type="password" class="form-control" id="inputCVC" placeholder="0000" max=>
                         </div> 
                         <div class="form-group col-md-4">
                         <label for="inputPassword4">Amount</label> <br>
@@ -46,13 +45,12 @@
                     <div class="form-row">
                         <div class="form-group col-md-6">
                         <label for="inputCity">City</label>
-                        <input type="text" class="form-control" id="inputCity">
+                        <input type="text" class="form-control" id="inputCity" onkeypress="return /[a-z]/i.test(event.key)">
                         </div>
                         <div class="form-group col-md-3">
                         <label for="inputState">State</label>
                         <select id="inputState" class="form-control">
                             <option selected>Pick a state</option>
-                            <option>...</option>
                         </select>
                         </div>
                         <div class="form-group col-md-3">
@@ -90,7 +88,6 @@
                             <p class="textfooter text-secondary">Add any notes here.</p>
                         </div>
                     </div>
-                </form>
                 <div class="card-footer text-muted">
                     <button type="button" id="cancel" class="btn btn-secondary">Cancel</button>
                     <button type="submit" class="btn btn-primary">Send</button>
