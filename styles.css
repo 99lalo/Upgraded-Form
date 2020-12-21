@@ -28,3 +28,8 @@
     width: 22.1em;
     margin-left: 0.5em;
 }
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
