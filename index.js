@@ -14,26 +14,21 @@ errorTab.appendChild(failure)
 function Information(event) {
     event.preventDefault();
     let counter = 0;
-    let flag = 0;
-    
+    failure.innerHTML = "";
     allInputs.forEach(function(inpt, index){
         if(inpt.value){
             counter += 1;
             inpt.className = "form-control"
-        } else if(flag == 0){
-            failure.innerHTML = (`Some fields are missing: ${errorAlert[index]} field`)
-            failure.className = `alert alert-danger`
-            flag = 1;
-            inpt.className += ` alert-danger`
         } else{
-            failure.innerHTML += `, ${errorAlert[index]} field`
+            failure.innerHTML += `<div>Some fields are missing: ${errorAlert[index]} field</div>`
+            failure.className = `alert alert-danger`
             inpt.className += ` alert-danger`
         }
     })
         if(document.querySelector("#inputState").value != 'Pick a state'){
         counter += 1;
     } else {
-            failure.innerHTML += `, ${errorAlert[6]} field`
+            failure.innerHTML += `<div>Some fields are missing: ${errorAlert[6]} field</div>`
             document.querySelector("#inputState").className += ` alert-danger`
     }
     if(counter == (allInputs.length +1)){
